@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Account, purchase or password problem
+    url: mailto:info@archeryspot.app
+    about: Anything private — please e-mail us instead of opening a public issue.
+  - name: Archery Spot website
+    url: https://www.archeryspot.app
+    about: Downloads and product info.

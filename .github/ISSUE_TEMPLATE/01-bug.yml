@@ -1,0 +1,100 @@
+name: 🐞 Bug report
+description: Something in the app doesn't work the way it should
+title: "[Bug] "
+labels: ["bug", "from-tester"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. Please check the [open reports](https://github.com/vtajzich/archery-spot-feedback/issues)
+        first — if it's already there, a 👍 or a comment helps us more than a duplicate.
+
+        **This page is public.** Don't include names, e-mail addresses or account IDs.
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iPhone / iPad
+        - Android
+    validations:
+      required: true
+
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      description: "Open the app → Settings → About. Copy it exactly, including the number in brackets."
+      placeholder: 2.4.1 (51)
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      placeholder: iPhone 14 Pro
+    validations:
+      required: true
+
+  - type: input
+    id: os_version
+    attributes:
+      label: System version
+      placeholder: iOS 18.2
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How do we reproduce it?
+      description: Step by step, starting from opening the app.
+      placeholder: |
+        1. Open the app
+        2. Tap …
+        3. …
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Sometimes
+        - It happened once
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or a screen recording
+      description: Drag files straight into this box. Please check them for personal data first.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: public_ack
+    attributes:
+      label: Before you submit
+      options:
+        - label: I understand this page is public, and my report contains no personal data.
+          required: true

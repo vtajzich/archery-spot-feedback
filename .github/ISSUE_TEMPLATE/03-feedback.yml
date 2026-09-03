@@ -1,0 +1,50 @@
+name: 💡 Feedback or idea
+description: An idea, or something that works but feels wrong
+title: "[Feedback] "
+labels: ["enhancement", "from-tester"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Short is fine. "This screen confuses me" is a useful report.
+
+        **This page is public.** Don't include names, e-mail addresses or account IDs.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - An idea for something new
+        - Something is confusing
+        - Something is slow or awkward to use
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Tell us
+      description: If it's about a specific screen, say which one.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iPhone / iPad
+        - Android
+        - Both / not specific
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: public_ack
+    attributes:
+      label: Before you submit
+      options:
+        - label: I understand this page is public, and my report contains no personal data.
+          required: true

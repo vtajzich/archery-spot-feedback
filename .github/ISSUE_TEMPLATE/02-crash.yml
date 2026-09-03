@@ -1,0 +1,110 @@
+name: 💥 App crashed
+description: The app closed itself, froze, or disappeared back to the home screen
+title: "[Crash] "
+labels: ["crash", "bug", "from-tester"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        When the app closes itself there's nothing left on screen to photograph, so what
+        you remember is the most valuable thing here. Even a rough answer helps.
+
+        **This page is public.** Don't include names, e-mail addresses or account IDs.
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iPhone / iPad
+        - Android
+    validations:
+      required: true
+
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      description: "Open the app → Settings → About. Copy it exactly, including the number in brackets."
+      placeholder: 2.4.1 (51)
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      placeholder: iPhone 14 Pro
+    validations:
+      required: true
+
+  - type: input
+    id: os_version
+    attributes:
+      label: System version
+      placeholder: iOS 18.2
+    validations:
+      required: true
+
+  - type: input
+    id: screen
+    attributes:
+      label: Which screen were you on?
+      placeholder: Scoring an event / Gear / Settings …
+    validations:
+      required: true
+
+  - type: textarea
+    id: doing_what
+    attributes:
+      label: What were you doing right before it closed?
+      description: The last thing you tapped or typed, as best you remember.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Can you make it happen again?
+      options:
+        - Every time I do this
+        - Sometimes
+        - It happened once and I can't repeat it
+    validations:
+      required: true
+
+  - type: dropdown
+    id: after_update
+    attributes:
+      label: Did it start after an update?
+      options:
+        - Yes, it started after the last update
+        - "No, it did it before too"
+        - I don't know
+    validations:
+      required: false
+
+  - type: textarea
+    id: ios_crash_log
+    attributes:
+      label: Crash log (iPhone / iPad only)
+      description: |
+        Optional, but it's the single most useful thing you can attach.
+
+        **Settings → Privacy & Security → Analytics & Improvements → Analytics Data**,
+        then scroll to files starting with `Archery Spot-` and share the newest one.
+
+        It only exists if you have "Share iPhone Analytics" switched on — if the list is
+        empty, that's fine, just skip this.
+
+        On Android there is no crash log you can get to, so leave this empty.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: public_ack
+    attributes:
+      label: Before you submit
+      options:
+        - label: I understand this page is public, and my report contains no personal data.
+          required: true
